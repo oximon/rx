@@ -1,0 +1,680 @@
+@import '../../../styles/varible';
+@import '../../../styles/mixins.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  @include respond-to(tablet) {
+    flex-direction: column;
+  }
+
+  @include respond-to(phone) {
+    flex-direction: column;
+  }
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  max-width: 680px;
+
+  @include respond-to(tablet) {
+    margin-bottom: 10px;
+  }
+
+  @include respond-to(phone) {
+    margin-bottom: 15px;
+  }
+}
+
+.navbar__btn {
+  width: 123px;
+  height: 44px;
+  margin-right: 20px;
+
+  @include respond-to(desctop-middle) {
+    width: 102px;
+    height: 35px;
+    margin-right: 10px;
+  }
+
+  @include respond-to(desctop-small) {
+    width: 109px;
+    height: 35px;
+    margin-right: 15px;
+  }
+
+  @include respond-to(tablet) {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+
+    span {
+      display: none;
+    }
+  }
+
+  @include respond-to(phone) {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.navbar__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 460px;
+
+  @include respond-to(tablet) {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @include respond-to(phone) {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.navbar__menuItem {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px 3px;
+  cursor: pointer;
+
+  &:hover {
+    .navbar__menuItemText {
+      color: $orange;
+    }
+
+    .navbar__menuItemIcon {
+      svg {
+        path {
+          transition: 0.1s ease-in;
+          fill: $orange;
+        }
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    margin-right: 23px;
+
+    @include respond-to(desctop-middle) {
+      margin-right: 17px;
+    }
+
+    @include respond-to(desctop-small) {
+      margin-right: 10px;
+    }
+
+    @include respond-to(tablet) {
+      margin-right: 0;
+      padding-right: 15px;
+    }
+
+    @include respond-to(phone) {
+      margin-right: 0;
+    }
+  }
+}
+
+.navbar__menuItemLink {
+  text-decoration: none;
+  margin-right: 16px;
+
+  @include respond-to(desctop-middle) {
+    margin-right: 12px;
+  }
+
+  @include respond-to(desctop-small) {
+    margin-right: 8px;
+  }
+
+  @include respond-to(tablet) {
+    margin-right: 0;
+    padding: 0;
+  }
+
+  @include respond-to(phone) {
+    margin-right: 0;
+    padding: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:first-child {
+    @include respond-to(tablet) {
+      padding-left: 15px;
+    }
+  }
+
+  &:hover {
+    .navbar__menuItemText {
+      color: $orange;
+    }
+
+    .navbar__menuItemIcon {
+      svg {
+        path {
+          fill: $orange;
+        }
+      }
+    }
+  }
+
+  &:active {
+    .navbar__menuItemText {
+      color: rgba(255, 92, 0, 0.5);
+    }
+
+    .navbar__menuItemIcon {
+      svg {
+        path {
+          fill: rgba(255, 92, 0, 0.5);
+        }
+      }
+    }
+  }
+
+  &:first-of-type {
+    background-color: $yellow;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: $black;
+
+      svg {
+        color: $yellow !important;
+      }
+    }
+
+    &:active {
+      background-color: $black;
+      color: rgba(254, 235, 16, 0.5);
+
+      svg {
+        color: rgba(254, 235, 16, 0.5);
+      }
+
+      path {
+        fill: rgba(254, 235, 16, 0.5);
+      }
+    }
+
+    @include respond-to(desctop-middle) {
+      width: 36px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .navbar__menuItemText {
+        display: none;
+      }
+    }
+
+    @include respond-to(desctop-small) {
+      width: 47px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .navbar__menuItemText {
+        display: none;
+      }
+    }
+
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    @include respond-to(phone) {
+      display: none;
+    }
+  }
+}
+
+.navbar__menuItemText {
+  font-family: $Raleway;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  color: #01012c;
+  font-weight: 500;
+  margin: 0;
+  transition: color 0.1s ease-in;
+
+  @include respond-to(phone) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.navbar__menuItem_active {
+  .navbar__menuItemText {
+    color: $orange;
+  }
+
+  .navbar__menuItemIcon {
+    svg {
+      path {
+        fill: $orange;
+
+      }
+    }
+  }
+}
+
+.navbar__menuItemIcon {
+  svg {
+    font-size: 20px;
+    color: $black;
+    margin-bottom: 1px;
+
+    path {
+      transition: 0.1s ease-in;
+    }
+  }
+}
+
+.navbar__menuItemLink {
+  text-decoration: none;
+}
+
+.navbar__catalog {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 159px;
+  max-height: 100000px;
+  background: linear-gradient(90deg, rgb(242, 242, 244) 0, rgb(242, 242, 244) 50.9999%, #fff 51%, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  z-index: 9999999;
+
+  @include respond-to(desctop-small) {
+    top: 126px;
+  }
+
+  @include respond-to(tablet) {
+    background: linear-gradient(90deg, #f2f2f4 0, #f2f2f4 45.9999%, #fff 46%, #fff);
+
+    top: 160px;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+  }
+
+  @include respond-to(phone) {
+    top: 149px;
+    background: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    transform: none;
+  }
+
+  .wrapper {
+    @include respond-to(phone) {
+      max-width: 303px !important;
+    }
+  }
+}
+
+.navbar__catalogWrapper {
+  width: 100%;
+  display: flex;
+
+  @include respond-to(phone) {
+    ul {
+      list-style: none;
+      padding: 0;
+      overflow-y: scroll;
+      height: calc(100vh - 220px);
+
+      .navbar__catalogSidebarTitleContainer {
+        background-color: rgb(242, 242, 244);
+      }
+
+      .navbar__catalogSidebarTitleContainer_active {
+        background-color: #fff;
+
+        h3 {
+          border-bottom: 1px solid rgb(242, 242, 244);
+        }
+
+        .navbar__catalogMain {
+          display: block;
+        }
+      }
+
+      .navbar__catalogMain {
+        display: none;
+
+        ul {
+          @include respond-to(phone) {
+            max-height: 50vh !important;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(phone) {
+    flex-direction: column;
+    max-width: 303px;
+  }
+}
+
+.navbar__catalogSidebar {
+  padding-top: 23px;
+  background: rgb(242, 242, 244);
+
+  @include respond-to(phone) {
+    padding-top: 10px;
+    height: calc(100vh - 210px);
+    overflow-y: scroll;
+  }
+}
+
+.navbar__catalogSidebarTitle {
+  height: 58.5px;
+  margin: 0 29px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  color: $black;
+  cursor: pointer;
+  text-align: right;
+
+  @include respond-to(tablet) {
+    font-size: 12px;
+    line-height: 20px;
+    height: 40px;
+    margin: 0 19px 0 0;
+  }
+
+  @include respond-to(phone) {
+    font-size: 12px;
+    line-height: 20px;
+    height: 40px;
+    margin: 0;
+    text-align: center;
+    padding-right: 0;
+    justify-content: center;
+  }
+}
+
+.navbar__catalogSidebarTitleContainer {
+  position: relative;
+}
+
+.navbar__catalogSidebarTitleContainer_active {
+  .navbar__catalogSidebarTitle {
+    background-color: #fff;
+    margin-left: -100000%;
+
+    @include respond-to(tablet) {
+      margin-left: -18px;
+    }
+
+    @include respond-to(phone) {
+      margin-left: 0;
+    }
+  }
+
+  .navbar__catalogSidebarTitleTriangle {
+    position: absolute;
+    right: -31px;
+    top: -1px;
+    border: 30px solid transparent;
+    border-left: 30px solid #fff;
+
+    @include respond-to(tablet) {
+      right: -21px;
+      top: -1px;
+      border: 20px solid transparent;
+      border-left: 20px solid #fff;
+    }
+
+    @include respond-to(phone) {
+      display: none;
+    }
+  }
+}
+
+.navbar__catalogMain {
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 45px 23px;
+
+  @include respond-to(tablet) {
+    padding: 25px 0 0 5px;
+  }
+
+  @include respond-to(phone) {
+    padding: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 1;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff !important;
+
+    @include respond-to(desctop-middle) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    @include respond-to(desctop-small) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    @include respond-to(tablet) {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      height: calc(100vh - 245px);
+    }
+
+    @include respond-to(phone) {
+      display: flex;
+      flex-direction: column;
+      max-width: 320px;
+      overflow-y: scroll;
+      height: calc(100vh - 200px - 608px);
+    }
+
+    li {
+      margin-bottom: 42px;
+      max-width: 350px;
+
+      @include respond-to(tablet) {
+        max-width: 250px;
+      }
+
+      @include respond-to(phone) {
+        max-width: 320px;
+        margin-bottom: 25px;
+
+        &:first-child {
+          padding-top: 25px;
+        }
+      }
+
+      span {
+        font-size: 25px;
+        line-height: 24px;
+        letter-spacing: 0.04em;
+        font-weight: 600;
+        font-family: $Raleway;
+        color: $orange;
+        padding-left: 26px;
+
+        @include respond-to(phone) {
+          font-size: 21px;
+          line-height: 20px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0.08em;
+        color: $black;
+        font-weight: 500;
+        font-family: $Raleway;
+        margin: 24px 0;
+        cursor: pointer;
+
+        @include respond-to(phone) {
+          font-size: 12px;
+          line-height: 16px;
+          margin: 15px 0;
+          padding: 0 10px;
+        }
+
+        &:hover {
+          color: $orange;
+        }
+
+        &:last-child {
+          margin: 24px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.navbar__input {
+  @include respond-to(desctop-middle) {
+    height: 35px;
+  }
+
+  @include respond-to(desctop-small) {
+    height: 35px;
+  }
+
+  @include respond-to(tablet) {
+    height: 35px;
+  }
+
+  @include respond-to(phone) {
+    height: 35px;
+  }
+}
+
+.navbar__inputBtn {
+  display: none;
+
+  @include respond-to(desctop-small) {
+    display: block;
+    width: 47px;
+    height: 35px;
+    margin-right: 15px;
+  }
+}
+
+.navbar__inputContainer {
+  width: 76%;
+  margin-right: 21px;
+  position: relative;
+  z-index: 100000;
+
+  @include respond-to(desctop-middle) {
+    margin-right: 14px;
+    width: 48%;
+  }
+
+  @include respond-to(desctop-small) {
+    .navbar__inputContainer_open {
+      display: block;
+    }
+
+    position: absolute;
+    bottom: -50px;
+    right: -390px;
+    margin-right: 0;
+    min-width: 580px;
+    display: none;
+  }
+
+  @include respond-to(tablet) {
+    margin-right: 0;
+    width: 62%;
+    height: 35px;
+  }
+
+  @include respond-to(phone) {
+    margin-right: 0;
+    width: 51%;
+    height: 35px;
+  }
+}
+
+.navbar__inputContainerBtn {
+  width: 35px;
+  height: 33px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  font-size: 17px;
+
+  @include respond-to(desctop-middle) {
+    width: 31px;
+    height: 31px;
+    top: 1.5px;
+  }
+
+  @include respond-to(desctop-small) {
+    width: 31px;
+    height: 31px;
+    top: 1.5px;
+  }
+
+  @include respond-to(tablet) {
+    width: 29px;
+    height: 29px;
+  }
+
+  @include respond-to(phone) {
+    width: 29px;
+    height: 29px;
+  }
+}

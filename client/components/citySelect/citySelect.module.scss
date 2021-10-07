@@ -1,0 +1,160 @@
+@import '../../../styles/varible';
+
+.citySelect {
+  position: relative;
+}
+
+.citySelect__chosenCity {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  svg {
+    color: $orange;
+    font-size: 10px;
+  }
+}
+
+.citySelect__chosenCityCity {
+  margin: 0;
+  text-decoration: underline;
+  margin: 0 5px 0 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.citySelect__chosenCityCity_black {
+  color: $black;
+}
+
+.citySelect__chosenCityCity_white {
+  color: #fff;
+}
+
+.citySelect__chosenCityCity_icon {
+  margin-top: 4px;
+  font-size: 12px !important;
+}
+
+.citySelect__list {
+  position: absolute;
+  width: 270px;
+  height: 374px;
+  background-color: $black;
+  z-index: 999999999;
+  border-radius: 5px;
+  padding: 15px 18px;
+  box-sizing: border-box;
+}
+
+.citySelect__list_bottom {
+  top: 50px;
+  left: 0;
+  .citySelect__listTriangle {
+    border-bottom: 20px solid $black;
+    top: -34px;
+    left: 25px;
+  }
+}
+
+.citySelect__list_top {
+  top: -410px;
+  left: 0;
+  .citySelect__list-triangle {
+    border-top: 20px solid $black;
+    top: 374px;
+    left: 25px;
+  }
+}
+
+.citySelect__listTitle {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 0 12px 8px;
+}
+
+.citySelect__listTriangle {
+  position: absolute;
+  border: 20px solid transparent;
+  z-index: 9999999;
+}
+
+.citySelect__listContainer {
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+  background-color: rgb(47, 47, 82);
+  height: 267px;
+  margin-bottom: 14px;
+  overflow-y: scroll;
+}
+
+.citySelect__listContainerCities {
+  font-family: $Raleway;
+}
+
+.citySelect__cityItem {
+  margin-top: 8px;
+  cursor: pointer;
+  padding: 0 8px;
+
+  &:hover {
+    background-color: rgba(0, 0, 43, 0.6);
+  }
+}
+
+.citySelect__cityItem_active {
+  padding: 0;
+  .citySelect__cityItemCity {
+    background-color: rgba(0, 0, 43, 0.6);
+    padding: 0 8px;
+  }
+}
+
+.citySelect__cityItemCity {
+  margin: 0 0 7px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  font-weight: 300;
+  color: #fff;
+}
+
+.citySelect__input {
+  background-color: transparent;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 0 !important;
+  outline: none;
+  color: #fff !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.citySelect__inputContainer {
+  position: relative;
+  padding: 0 8px;
+}
+
+.citySelect__inputIcon {
+  position: absolute;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.3);
+  top: 11px;
+  right: 17px;
+  cursor: pointer;
+  z-index: 999999;
+}
+
+.citySelect__btn {
+  width: 100%;
+  height: 30px;
+  font-family: $Montserrat !important;
+  font-size: 12px !important;
+  line-height: 15px !important;
+  font-weight: 500 !important;
+}

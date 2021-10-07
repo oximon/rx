@@ -1,0 +1,8 @@
+export enum ADS_TYPE_ENUM {
+  ADS_TYPE_RENT = 2,
+  ADS_TYPE_SALE = 1,
+  ADS_TYPE_TRANSPORTAION = 4,
+  ADS_TYPE_RENT_TITLE = 'rent',
+  ADS_TYPE_SALE_TITLE = 'sale',
+  ADS_TYPE_TRANSPORTATION_TITLE = 'transportaion',
+}

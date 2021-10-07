@@ -1,0 +1,804 @@
+@import '../../../styles/varible';
+@import '../../../styles/mixins.scss';
+
+.footer {
+  background-color: rgba(0, 0, 43, 0.65);
+}
+
+.footer__position {
+  position: relative;
+
+  @include respond-to(tablet) {
+    padding-bottom: 60px;
+  }
+
+  @include respond-to(phone) {
+    padding-bottom: 60px;
+  }
+}
+
+.footer__img {
+  position: absolute;
+  right: 0px;
+  z-index: 2;
+
+  @include respond-to(desctop-middle) {
+    max-width: 282px;
+    bottom: 45px;
+  }
+
+  @include respond-to(desctop-small) {
+    max-width: 282px;
+    bottom: 45px;
+  }
+
+  @include respond-to(tablet) {
+    max-width: 163px;
+    bottom: 77px;
+  }
+
+  @include respond-to(phone) {
+    max-width: 163px;
+    bottom: 77px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  padding: 21px 0 45px;
+
+  @include respond-to(desctop-small) {
+    padding: 21px 0 51px;
+  }
+
+  @include respond-to(tablet) {
+    padding: 13px 0 85px;
+  }
+
+  @include respond-to(phone) {
+    padding: 13px 0 90px;
+  }
+}
+
+.footer__description {
+  max-width: 214px;
+  margin-right: 53px;
+  position: relative;
+
+  @include respond-to(desctop-middle) {
+    margin-right: 29px;
+  }
+
+  @include respond-to(desctop-small) {
+    margin-right: 0px;
+    max-width: 158px;
+  }
+
+  @include respond-to(tablet) {
+    max-width: 158px;
+    margin-right: 45px;
+  }
+
+  @include respond-to(phone) {
+    max-width: 105px;
+    margin-right: 34px;
+  }
+
+  .citySelect__chosenCityCity {
+    @include respond-to(tablet) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include respond-to(phone) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+.footer__descriptionLogo {
+  max-width: 214px;
+  width: 100%;
+  margin-bottom: 5px;
+
+  @include respond-to(desctop-middle) {
+    max-width: 202px;
+    margin-bottom: 20px;
+  }
+
+  @include respond-to(desctop-small) {
+    max-width: 124px;
+    margin-bottom: 5px;
+  }
+
+  @include respond-to(tablet) {
+    max-width: 122px;
+    margin-bottom: 5px;
+  }
+
+  @include respond-to(phone) {
+    max-width: 105px;
+    margin-bottom: 5px;
+  }
+}
+
+.footer__descriptionText {
+  font-family: $Montserrat;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 18px;
+
+  @include respond-to(desctop-middle) {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 37px;
+  }
+
+  @include respond-to(desctop-small) {
+    margin: 0 0 44px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include respond-to(tablet) {
+    margin: 0 0 14px;
+    font-size: 12px;
+    line-height: 15px;
+    min-width: 160px;
+  }
+
+  @include respond-to(phone) {
+    margin: 0 0 14px;
+    font-size: 12px;
+    line-height: 15px;
+    min-width: 105px;
+    display: none;
+  }
+}
+
+.footer__descriptionText_adaptive {
+  font-family: $Montserrat;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  margin: 0 0 14px;
+  font-size: 12px;
+  line-height: 15px;
+  min-width: 105px;
+  display: none;
+  color: #fff;
+
+  @include respond-to(phone) {
+    display: block;
+  }
+}
+
+.footer__descriptionTextBtn {
+  display: none;
+
+  @include respond-to(phone) {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+    font-family: $Montserrat;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    margin-bottom: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.footer__info {
+  position: relative;
+  z-index: 10000;
+  margin: 0 50px 0 0;
+
+  @include respond-to(desctop-middle) {
+    margin-right: 30px;
+  }
+
+  @include respond-to(desctop-small) {
+    margin-right: 22px;
+  }
+
+  @include respond-to(tablet) {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 175px;
+  }
+
+  @include respond-to(phone) {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 155px;
+  }
+
+  &:nth-child(3) {
+    @include respond-to(desctop-small) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.footer__infoContainer {
+  display: flex;
+  padding: 0;
+  list-style: none;
+
+  @include respond-to(tablet) {
+    flex-direction: column;
+  }
+
+  @include respond-to(phone) {
+    flex-direction: column;
+  }
+}
+
+.footer__info_contacts {
+  margin-right: 0;
+
+  .footer__infoTitle {
+    margin-bottom: 26px;
+    @include respond-to(desctop-middle) {
+      margin-bottom: 22px;
+    }
+
+    @include respond-to(desctop-small) {
+      margin-bottom: 28px;
+    }
+
+    @include respond-to(tablet) {
+      margin-bottom: 10px;
+    }
+
+    @include respond-to(phone) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer__infoLink {
+    @include respond-to(tablet) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    @include respond-to(phone) {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+.footer__infoTitle {
+  font-family: $Montserrat;
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: $black;
+
+  @include respond-to(desctop-middle) {
+    font-size: 17px;
+    line-height: 21px;
+    margin-bottom: 19px;
+  }
+
+  @include respond-to(desctop-small) {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 21px;
+  }
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+
+  @include respond-to(phone) {
+    display: none;
+  }
+}
+
+.footer__infoTitle_adaptive {
+  display: none !important;
+  font-family: $Montserrat;
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: $black;
+
+  @include respond-to(tablet) {
+    display: flex !important;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 43, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+
+  @include respond-to(phone) {
+    display: flex !important;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(0, 0, 43, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+  }
+}
+
+.footer__infoTitleIcon {
+  display: none;
+
+  @include respond-to(tablet) {
+    display: block;
+    color: $orange;
+    font-size: 12px;
+  }
+
+  @include respond-to(phone) {
+    display: block;
+    color: $orange;
+    font-size: 12px;
+  }
+}
+
+.footer__infoTitle_social {
+  margin-bottom: 10px !important;
+
+  @include respond-to(tablet) {
+    color: #fff;
+  }
+
+  @include respond-to(phone) {
+    color: #fff;
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+}
+
+.footer__infoList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: none;
+  position: relative;
+
+  @include respond-to(tablet) {
+    margin-bottom: 10px;
+  }
+
+  @include respond-to(phone) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__infoList_open {
+  display: block;
+}
+
+.footer__infoList_close {
+  display: none;
+}
+
+.footer__infoList_cooperation {
+  margin-bottom: 42px;
+
+  @include respond-to(desctop-middle) {
+    margin-bottom: 67px;
+  }
+
+  @include respond-to(desctop-small) {
+    margin-bottom: 59px;
+    width: 217px;
+  }
+
+  @include respond-to(tablet) {
+    margin-bottom: 10px;
+  }
+
+  @include respond-to(phone) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__infoList_social {
+  position: absolute;
+  left: 428px;
+  bottom: 50px;
+  z-index: 50;
+
+  @include respond-to(desctop-middle) {
+    left: 377px;
+  }
+
+  @include respond-to(desctop-small) {
+    left: 250px;
+  }
+
+  @include respond-to(tablet) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 25px;
+  }
+
+  @include respond-to(phone) {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 25px;
+  }
+
+  .footer__infoTitle {
+    @include respond-to(tablet) {
+      font-size: 14px;
+      line-height: 17px;
+      border-bottom: none;
+      margin-bottom: 5px !important;
+    }
+
+    @include respond-to(phone) {
+      font-size: 14px;
+      line-height: 17px;
+      border-bottom: none;
+      margin-bottom: 5px !important;
+    }
+  }
+}
+
+.footer__infoList_icon {
+  display: flex;
+}
+
+.footer__infoListIcon {
+  box-sizing: border-box;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 43, 0.7);
+  color: #fff;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 43, 0.5);
+
+  @include respond-to(tablet) {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+
+    img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  @include respond-to(phone) {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__infoListItem {
+  font-family: $Montserrat;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: $black;
+  }
+
+  @include respond-to(desctop-middle) {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  @include respond-to(desctop-small) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @include respond-to(phone) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.footer__infoLink {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: #fff;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+.footer__infoLinkTdnone {
+  text-decoration: none;
+}
+
+.footer__infoLink_mail {
+  width: 220px;
+  display: flex;
+
+  @include respond-to(tablet) {
+    max-width: 155px;
+  }
+
+  @include respond-to(phone) {
+    max-width: 155px;
+  }
+}
+
+.footer__docs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  position: relative;
+
+  @include respond-to(desctop-small) {
+    padding-bottom: 10px;
+  }
+
+  @include respond-to(tablet) {
+    padding-bottom: 10px;
+  }
+
+  @include respond-to(phone) {
+    padding-bottom: 10px;
+  }
+}
+
+.footer__docsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include respond-to(phone) {
+    width: 74%;
+  }
+}
+
+.footer__docsContainer _adaptive {
+  display: none;
+  position: absolute;
+  top: -70px;
+
+  @include respond-to(tablet) {
+    display: block;
+
+    .footer__docs-item {
+      display: block;
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include respond-to(phone) {
+    display: block;
+    top: -90px;
+
+    .footer__docsItem {
+      display: block;
+      font-size: 10px;
+      line-height: 14px;
+      max-width: 105px;
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.footer__docsCopyright {
+  display: flex;
+  align-items: center;
+
+  svg {
+    font-size: 14px;
+    margin-right: 4px;
+    color: rgba(0, 0, 43, 0.5);
+  }
+}
+
+.footer__docsItem {
+  font-family: $Montserrat;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: rgba(0, 0, 43, 0.5);
+  margin: 0;
+  cursor: pointer;
+
+  @include respond-to(desctop-middle) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include respond-to(desctop-small) {
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+
+  @include respond-to(phone) {
+    display: none;
+  }
+}
+
+.footer__docsItemAdditionalInfo {
+  display: none;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: $Montserrat;
+  color: rgba(0, 0, 43, 0.5);
+  margin: 0;
+  text-decoration: underline;
+  cursor: pointer;
+  z-index: 5;
+  width: 100%;
+
+  @include respond-to(tablet) {
+    display: block;
+  }
+
+  @include respond-to(phone) {
+    display: block;
+  }
+}
+
+.footer__docsItem_copyright {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: flex-end;
+
+  @include respond-to(tablet) {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @include respond-to(phone) {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    margin-bottom: 1.5px;
+    margin-right: 1px;
+
+    @include respond-to(tablet) {
+      margin-bottom: 0;
+      font-size: 7px;
+      line-height: 10px;
+    }
+
+    @include respond-to(phone) {
+      margin-bottom: 0;
+      font-size: 7px;
+      line-height: 10px;
+    }
+  }
+}
+
+.footer__nav {
+  display: none;
+  padding: 8px 21px 5px;
+  background-color: $yellow;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100000000;
+
+  @include respond-to(tablet) {
+    display: block;
+  }
+
+  @include respond-to(phone) {
+    display: block;
+    padding: 6px 11px 4px;
+  }
+}
+
+.footer__navList {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__navItem {
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer__navItemText {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  font-family: $Montserrat;
+  margin: 0;
+
+  @include respond-to(phone) {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.footer__navItemIcon {
+  svg {
+    font-size: 30px;
+
+    @include respond-to(phone) {
+      font-size: 23px;
+    }
+  }
+}

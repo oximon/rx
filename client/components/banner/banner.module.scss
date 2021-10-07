@@ -1,0 +1,34 @@
+@import '../../../styles/mixins.scss';
+
+.banner {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  img {
+    @include respond-to(desctop-big) {
+      max-width: 1440px;
+      width: 100%;
+    }
+
+    @include respond-to(desctop-middle) {
+      max-width: 960px;
+      width: 100%;
+    }
+
+    @include respond-to(desctop-small) {
+      max-width: 768px;
+      width: 100%;
+    }
+
+    @include respond-to(tablet) {
+      max-width: 414px;
+      width: 100%;
+    }
+
+    @include respond-to(phone) {
+      max-width: 320px;
+      width: 100%;
+    }
+  }
+}

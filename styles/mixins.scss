@@ -1,0 +1,31 @@
+// MEDIA QUERY //
+
+$small: 320px;
+$small-middle: 414px;
+$middle: 768px;
+$middle-large: 960px;
+$large: 1440px;
+
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media only screen and (min-width: $small) and (max-width: $small-middle - 1) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $small-middle) and (max-width: $middle - 1) {
+      @content;
+    }
+  } @else if $media == desctop-small {
+    @media only screen and (min-width: $middle) and (max-width: $middle-large - 1) {
+      @content;
+    }
+  } @else if $media == desctop-middle {
+    @media only screen and (min-width: $middle-large) and (max-width: $large - 1) {
+      @content;
+    }
+  } @else if $media == desctop-big {
+    @media only screen and (min-width: $large) {
+      @content;
+    }
+  }
+}

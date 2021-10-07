@@ -1,0 +1,367 @@
+@import '../../../../styles/varible';
+@import '../../../../styles/mixins.scss';
+
+.popularShops {
+  padding-bottom: 25px;
+
+  @include respond-to(desctop-small) {
+    padding-bottom: 25px;
+  }
+
+  @include respond-to(tablet) {
+    padding-bottom: 15px;
+  }
+
+  @include respond-to(phone) {
+    padding-bottom: 15px;
+  }
+
+  .swiper {
+    &-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include respond-to(desctop-middle) {
+        width: 44% !important;
+      }
+
+      @include respond-to(desctop-small) {
+        width: 37% !important;
+        justify-content: inherit;
+      }
+
+      @include respond-to(tablet) {
+        width: 67% !important;
+        justify-content: inherit;
+      }
+
+      @include respond-to(phone) {
+        width: 88% !important;
+        justify-content: inherit;
+      }
+    }
+  }
+}
+
+.popularShops__containerBlock {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.swiperPagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  bottom: 0;
+}
+
+.swiperPaginationBullet {
+  width: 11px;
+  height: 11px;
+  background-color: $gray;
+  margin-right: 10px;
+  border-radius: 0;
+  opacity: 1;
+
+  @include respond-to(tablet) {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+
+  @include respond-to(phone) {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+}
+
+.swiperPaginationBulletActive {
+  background-color: $yellow;
+  width: 15px;
+  height: 15px;
+
+  @include respond-to(tablet) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @include respond-to(phone) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.swiperButtonPrev {
+  color: $orange;
+  z-index: 1001;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: -15px;
+  right: 90px;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+
+  @include respond-to(phone) {
+    display: none;
+  }
+
+  &::after {
+    font-size: 32px;
+    font-weight: 700;
+
+    // @include respond-to(desctop-middle) {
+    //   left: 770px;
+    // }
+
+    // @include respond-to(desctop-small) {
+    //   left: 590px;
+    //   bottom: -129px;
+    // }
+  }
+}
+
+.swiperButtonNext {
+  color: $orange;
+  z-index: 1001;
+  top: auto;
+  right: 0;
+  left: auto;
+  bottom: -15px;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+
+  @include respond-to(phone) {
+    display: none;
+  }
+
+  &::after {
+    font-size: 32px;
+    font-weight: 700;
+
+    // @include respond-to(desctop-small) {
+    //   bottom: -129px;
+    // }
+  }
+}
+
+.swiperButtonDisabled {
+  color: $black !important;
+  opacity: 1 !important;
+}
+
+.loading {
+  .popularShops__item {
+    background-color: rgba(0, 0, 43, 0.2);
+    box-shadow: none;
+    border: none;
+    height: 347px;
+
+    @include respond-to(desctop-small) {
+      height: 231px;
+    }
+
+    @include respond-to(tablet) {
+      height: 231px;
+    }
+
+    @include respond-to(phone) {
+      height: 231px;
+    }
+
+    .popularShops__itemDescription,
+    .popularShops__itemImgContainer {
+      display: none;
+    }
+  }
+}
+
+.popularShops__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popularShops__item {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 43, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  max-width: 369px;
+  width: 100%;
+  padding: 3px;
+  height: 100%;
+  height: 347px;
+
+  @include respond-to(desctop-small) {
+    max-width: 246px;
+  }
+
+  @include respond-to(tablet) {
+    max-width: 246px;
+  }
+
+  @include respond-to(phone) {
+    max-width: 246px;
+  }
+}
+
+.popularShops__itemDescription {
+  padding: 15px 10px;
+  display: flex;
+
+  @include respond-to(desctop-small) {
+    padding: 10px 5px;
+  }
+
+  @include respond-to(tablet) {
+    padding: 10px 5px;
+  }
+
+  @include respond-to(phone) {
+    padding: 10px 5px;
+  }
+}
+
+.popularShops__itemDescriptionImg {
+  margin-right: 20px;
+  object-fit: contain;
+  width: 75px;
+  height: 50px;
+}
+
+.popularShops__itemDescriptionTitle {
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: $black;
+  margin: 0 0 4px 0;
+
+  @include respond-to(desctop-small) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @include respond-to(phone) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.popularShops__itemDescriptionSignature {
+  font-family: $Raleway;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  font-weight: 300;
+  color: $black;
+  margin: 0;
+  width: 245px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popularShops__itemDescriptionImgContainer,
+.popularShops__itemImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popularShops__itemImgContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+
+  @include respond-to(desctop-small) {
+    gap: 2px;
+  }
+
+  @include respond-to(tablet) {
+    gap: 2px;
+  }
+
+  @include respond-to(phone) {
+    gap: 2px;
+  }
+}
+
+.popularShops__itemImg {
+  border-radius: 5px;
+  width: 100%;
+
+  &:nth-child(1) {
+    max-width: 237px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    height: 250px;
+
+    @include respond-to(desctop-small) {
+      height: 162px;
+    }
+
+    @include respond-to(tablet) {
+      height: 162px;
+    }
+
+    @include respond-to(phone) {
+      height: 162px;
+    }
+  }
+
+  &:nth-child(2) {
+    max-width: 119px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    justify-self: stretch;
+    height: 122px;
+
+    @include respond-to(desctop-small) {
+      height: 79px;
+    }
+
+    @include respond-to(tablet) {
+      height: 79px;
+    }
+
+    @include respond-to(phone) {
+      height: 79px;
+    }
+  }
+
+  &:nth-child(3) {
+    max-width: 119px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: stretch;
+    height: 122px;
+
+    @include respond-to(desctop-small) {
+      height: 79px;
+    }
+
+    @include respond-to(tablet) {
+      height: 79px;
+    }
+
+    @include respond-to(phone) {
+      height: 79px;
+    }
+  }
+}

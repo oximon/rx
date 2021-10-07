@@ -1,0 +1,45 @@
+@import '../../../styles/varible';
+@import '../../../styles/mixins.scss';
+
+.backTopBtn {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $yellow;
+  position: absolute;
+  bottom: 16px;
+  right: 36px;
+  cursor: pointer;
+  z-index: 999999;
+
+  @include respond-to(desctop-small) {
+    bottom: -25px;
+  }
+
+  @include respond-to(tablet) {
+    width: 35px;
+    height: 35px;
+    bottom: -15px;
+    right: 10px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @include respond-to(phone) {
+    width: 31px;
+    height: 31px;
+    bottom: 0px;
+    right: 5px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

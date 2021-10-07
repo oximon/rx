@@ -1,0 +1,40 @@
+@import '../../../../styles/varible';
+
+.input {
+  font-family: $Raleway;
+  border: 1px solid rgba(0, 0, 43, 0.2);
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  color: $black;
+  width: 100%;
+  outline: none;
+
+  &::placeholder {
+    color: rgba(0, 0, 43, 0.5);
+  }
+}
+
+.input__container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  input {
+    padding-left: 38px;
+  }
+}
+
+.input__containerIconLeft {
+  margin-right: -27px;
+  z-index: 1;
+
+  svg {
+    color: rgba(0, 0, 43, 0.5);
+  }
+}

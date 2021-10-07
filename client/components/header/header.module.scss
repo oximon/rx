@@ -1,0 +1,204 @@
+@import '../../../styles/varible';
+@import '../../../styles/mixins.scss';
+
+.header {
+  margin: 0 auto;
+
+  .citySelect {
+    margin-right: 48px;
+
+    @include respond-to(desctop-small) {
+      margin-right: 16px;
+    }
+
+    @include respond-to(tablet) {
+      margin-right: 0;
+    }
+
+    @include respond-to(phone) {
+      margin-right: 0;
+    }
+  }
+}
+
+.header__logoContainer {
+  display: flex;
+  align-items: center;
+  max-width: 160px;
+  width: 100%;
+}
+
+.navbar__logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  margin-right: 23px;
+
+  @include respond-to(desctop-small) {
+    max-width: 107px;
+    margin-right: 15px;
+  }
+
+  @include respond-to(tablet) {
+    max-width: 90px;
+    margin-right: 8px;
+  }
+
+  @include respond-to(phone) {
+    max-width: 90px;
+    margin-right: 8px;
+  }
+}
+
+.header__button_login_svg {
+  font-size: 24px;
+  transition: 0.1s ease-in;
+
+  path {
+    transition: 0.1s ease-in;
+  }
+}
+
+.header__button_plus_svg {
+  margin-right: 3px;
+}
+
+.header__navbar {
+  padding-top: 13px;
+  padding-bottom: 11px;
+
+  @include respond-to(desctop-middle) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  @include respond-to(desctop-small) {
+    padding-top: 10px;
+    padding-bottom: 7px;
+  }
+
+  @include respond-to(tablet) {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  @include respond-to(phone) {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+}
+
+.header__top {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond-to(tablet) {
+    min-height: 39px;
+    padding-top: 15px;
+  }
+
+  @include respond-to(phone) {
+    min-height: 40px;
+  }
+}
+
+.header__btnContainer {
+  display: flex;
+  align-items: center;
+
+  @include respond-to(tablet) {
+    display: none;
+  }
+
+  @include respond-to(phone) {
+    display: none;
+  }
+
+  button {
+    height: 44px;
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 115px;
+    }
+
+    @include respond-to(desctop-small) {
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      width: 163px;
+
+      @include respond-to(desctop-middle) {
+        width: 77px;
+      }
+
+      @include respond-to(desctop-small) {
+        width: 84px;
+      }
+    }
+  }
+}
+
+.header__blackColor {
+  box-shadow: 0px 0px 16px rgba(0, 0, 43, 0.16);
+}
+
+.header__question {
+  display: none;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  font-family: $Montserrat;
+  color: $yellow;
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0;
+
+  @include respond-to(tablet) {
+    display: block;
+  }
+
+  @include respond-to(phone) {
+    display: block;
+  }
+}
+
+.header__descriptionBlock {
+  position: relative;
+  min-height: 381px;
+  padding-top: 13px;
+
+  @include respond-to(desctop-middle) {
+    min-height: 270px;
+  }
+
+  @include respond-to(desctop-small) {
+    min-height: 240px;
+    padding-top: 1px;
+  }
+
+  @include respond-to(tablet) {
+    min-height: 240px;
+    padding-top: 1px;
+  }
+
+  @include respond-to(phone) {
+    min-height: 186px;
+    padding-top: 1px;
+  }
+}
+
+.header__descriptionBlockGradient {
+  background: linear-gradient(rgba(0, 0, 43, 0.83), rgba(255, 255, 255, 0));
+}

@@ -1,0 +1,112 @@
+@import '../../../../styles/varible';
+
+.btn {
+  font-family: $Raleway;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.15s ease-in;
+}
+
+.btn__close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 0;
+  outline: none;
+
+  svg {
+    font-size: 23px;
+    transition: color 0.1s ease-in;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.btn__iconLeft {
+  svg {
+    transition: 0.02s ease-in;
+    margin-right: 4px;
+  }
+
+  path {
+    transition: 0.15s ease-in;
+  }
+}
+
+.btnYellow {
+  background-color: $yellow;
+  color: $black;
+
+  svg {
+    color: $black;
+  }
+
+  &:hover {
+    background-color: $black;
+    color: $yellow;
+
+    svg {
+      color: $yellow;
+    }
+
+    path {
+      fill: $yellow;
+    }
+  }
+
+  &:active {
+    background-color: $black;
+    color: rgba(254, 235, 16, 0.5);
+
+    svg {
+      color: rgba(254, 235, 16, 0.5);
+    }
+
+    path {
+      fill: rgba(254, 235, 16, 0.5);
+    }
+  }
+}
+
+.btn-outline-yellow {
+  border: 1px solid $yellow !important;
+  background-color: transparent;
+  color: $yellow;
+}
+
+.btnBlack {
+  background-color: $black;
+  color: $yellow;
+
+  svg {
+    color: $yellow;
+  }
+
+  &:hover {
+    background-color: $yellow;
+    color: $black;
+
+    svg {
+      color: $black;
+    }
+  }
+
+  &:active {
+    background-color: $yellow;
+    color: rgba(0, 0, 43, 0.5);
+
+    svg {
+      color: rgba(0, 0, 43, 0.5);
+    }
+  }
+}

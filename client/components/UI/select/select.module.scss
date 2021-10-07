@@ -1,0 +1,109 @@
+@import '../../../../styles/varible';
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select_text {
+  margin: 0 10px 0 0;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: $Raleway;
+  letter-spacing: 0.04em;
+  color: rgb(0, 0, 43);
+}
+
+.select_input {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  transition: 0.1s ease-in;
+
+  &:hover {
+    background-color: rgba(0, 0, 43, 0.1);
+    border-radius: 5px;
+  }
+}
+
+.select_input_value {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: $Raleway;
+  color: rgb(0, 0, 43);
+  text-decoration: underline;
+  cursor: pointer;
+
+  svg {
+    margin-top: 3px;
+  }
+}
+
+.select_dropdown {
+  display: block;
+  position: absolute;
+  user-select: none;
+  z-index: 10000;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  right: -22px;
+  top: 20px;
+  width: 142px;
+}
+
+.select_numeric_dropdown {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  border-radius: 5px;
+  right: -3px;
+  top: 20px;
+
+  width: 40px;
+  user-select: none;
+}
+
+.select_list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.rotate {
+  transform: rotate(+180deg);
+}
+
+.icon {
+  font-size: 8px;
+  color: $orange;
+  margin-left: 3px;
+}
+
+.select_item {
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: rgb(0, 0, 43);
+  font-family: $Raleway;
+  padding: 7px;
+
+  &:first-child {
+    border-radius: 5px 5px 0 0;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 43, 0.1);
+  }
+}

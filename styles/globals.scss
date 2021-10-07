@@ -1,0 +1,123 @@
+@import './varible';
+@import './mixins';
+
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: $Montserrat;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1146px;
+  margin: 0 auto;
+
+  @include respond-to(desctop-middle) {
+    max-width: 890px;
+  }
+
+  @include respond-to(desctop-small) {
+    max-width: 726px;
+  }
+
+  @include respond-to(tablet) {
+    max-width: 392px;
+  }
+
+  @include respond-to(phone) {
+    max-width: 310px;
+  }
+}
+
+.padding-9rem {
+  padding-left: 9rem;
+  padding-right: 9rem;
+
+  @include respond-to(desctop-middle) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include respond-to(desctop-small) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include respond-to(tablet) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include respond-to(phone) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+//TODO: перенести стили sectionTitle в компонент
+// mainpage -> brands //
+
+.sectionTitleMainpageBrands {
+  padding: 0 0 35px;
+
+  @include respond-to(desctop-middle) {
+    padding: 0 0 35px;
+  }
+
+  @include respond-to(desctop-small) {
+    padding: 0 0 35px;
+  }
+
+  @include respond-to(tablet) {
+    padding: 0 0 18px;
+  }
+
+  @include respond-to(phone) {
+    padding: 0 0 25px;
+  }
+}
+
+// mainpage -> popular shhops //
+
+.sectionTitleMainpagePopularShops {
+  padding: 100px 0 35px;
+
+  @include respond-to(desctop-middle) {
+    padding: 80px 0 35px;
+  }
+
+  @include respond-to(desctop-small) {
+    padding: 60px 0 35px;
+  }
+
+  @include respond-to(tablet) {
+    padding: 30px 0 25px;
+  }
+
+  @include respond-to(phone) {
+    margin: 25px 0 17px;
+    padding: 0;
+  }
+}
+
+// mainpage -> best offers //
+
+.sectionTitleMainpageBestOffers {
+  margin: 90px 0 50px;
+
+  @include respond-to(desctop-middle) {
+    margin: 83px 0 50px;
+  }
+
+  @include respond-to(desctop-small) {
+    margin: 40px 0;
+  }
+
+  @include respond-to(tablet) {
+    margin: 30px 0 20px;
+  }
+
+  @include respond-to(phone) {
+    margin: 26px 0 17px;
+  }
+}
