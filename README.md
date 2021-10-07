@@ -8,6 +8,9 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+
+# and
+create .env, add NEXT_PUBLIC_API_HOST=example.ru, where NEXT_PUBLIC_API_HOST is address of backend
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
